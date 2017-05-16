@@ -1,0 +1,45 @@
+﻿@model IEnumerable<WeekProj6.Models.Top>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-sm-4 col-md-4">
+            <div class="caption text-center">
+
+                <h3>@Html.DisplayFor(modelItem => item.Name)</h3>
+
+                @if (item.Photo != "...")
+                {
+                    <a href="@Url.Action("Details", "Tops", new { id = item.TopID })" class="thumbnail">
+                        <img src=@Url.Content(item.Photo)>
+
+                    </a>
+                }
+                    <p>@Html.DisplayFor(modelItem => item.Type)</p>
+                    <p>@Html.DisplayFor(modelItem => item.Color)</p>
+                    <p>@Html.DisplayFor(modelItem => item.Season)</p>
+                    <p>@Html.DisplayFor(modelItem => item.Occasion)</p>
+
+            </div>
+        </div>
+
+            <div>
+                @Html.ActionLink("Edit", "Edit", new { id = item.TopID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.TopID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.TopID })
+            </div>
+
+    }
+
+
+</div>

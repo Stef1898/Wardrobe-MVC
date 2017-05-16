@@ -1,0 +1,69 @@
+﻿@{
+    ViewBag.Title = "Wardrobe";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<div class="row">
+
+    <div class="col-md-4">
+        <h2>@Html.ActionLink("Headwear", "Index", "Hats")</h2>
+        <p>
+            From wigs, to hair clips, to hats, if something goes on the head, we recommend you place it here!
+        </p>
+    </div>
+
+    <div class="col-md-4">
+        <h2>@Html.ActionLink("Tops", "Index", "Tops")</h2>
+        <p>
+            All varieties of shirts, jackets, and vests qualify!
+        </p>
+    </div>
+
+    <div class="col-md-4">
+        <h2>@Html.ActionLink("Dresses", "Index", "Dresses")</h2>
+        <p>
+            Who wants to put a dress, robe, or kimono in the "tops" category?  "Not I" you say?  We've created this category just
+            for people like you! 
+        </p>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-sm-4 col-md-4">
+        <h2>@Html.ActionLink("Bottoms", "Index", "Bottoms")</h2>
+        <p>
+            The perfect place for your pants, jeans, leggings, tights, skirts, skorts, shorts, and capris!
+        </p>
+    </div>
+
+    <div class="col-sm-4 col-md-4">
+        <h2>@Html.ActionLink("Shoes", "Index", "Shoes")</h2>
+        <p>
+            Unless your going as Rapunzel or Jack Frost, you might want to consider incorporating a pair of shoes, slippers, or at 
+            least socks, into your outfit!
+        </p>
+    </div>
+
+    <div class="col-sm-4 col-md-4">
+        <h2>@Html.ActionLink("Bags", "Index", "Bags")</h2>
+        <p>
+            Sure you could put purses, bags, baskets, or fanny packs, into the accessories category, but since each cosplay can demand
+            several accessories, why take up more room in that section than necessary?
+        </p>
+    </div>
+
+
+
+
+    <div class="col-sm-4 col-md-4">
+        <h2>@Html.ActionLink("Accessories", "Index", "Accessories")</h2>
+        <p>
+            Until further notice, anything you have left probably goes here!  Jewelry, crowns, wands, gloves, weapons, belts, and
+            anything else not covered above!  -Be on the lookout for more available categories in the future!
+        </p>
+    </div>
+
+
+</div>

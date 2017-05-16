@@ -1,0 +1,110 @@
+﻿@model IEnumerable<WeekProj6.Models.Outfit>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-sm-4 col-md-4">
+            <div class="caption text-center">
+
+                <!--Name-->
+
+                <h3>@Html.DisplayFor(modelItem => item.Name)</h3>
+
+                <!--Head Piece-->
+                 
+                @if (item.Hat.Photo != "...")
+                {
+                    <a href="@Url.Action("Details", "Hats", new { id = item.HeadwearID })" class="thumbnail">
+                    <img src=@Url.Content(item.Hat.Photo)>
+
+                    </a>
+                    }
+
+                <!--Accessory-->
+
+                @if (item.Accessory.Photo != "...")
+                {
+                    <a href="@Url.Action("Details", "Accessories", new { id = item.TopID })" class="thumbnail">
+                        <img src=@Url.Content(item.Accessory.Photo)>
+
+                    </a>
+                }
+
+                <!--Tops-->
+
+                @if (item.Top.Photo != "...")
+                {
+                    <a href="@Url.Action("Details", "Tops", new { id = item.TopID })" class="thumbnail">
+                    <img src=@Url.Content(item.Top.Photo)>
+
+                    </a>
+                }
+
+                <!--Dress-->
+
+                @if (item.Dress.Photo != "...")
+                {
+                <a href="@Url.Action("Details", "Dresses", new { id = item.DressID })" class="thumbnail">
+                    <img src=@Url.Content(item.Dress.Photo)>
+
+                    </a>
+                    }
+
+                <!--Bottom-->
+
+               @if (item.Bottom.Photo != "...")
+               {
+                <a href="@Url.Action("Details", "Bottoms", new { id = item.TopID })" class="thumbnail">
+                        <img src=@Url.Content(item.Bottom.Photo)>
+
+                        </a>
+                        }
+
+                <!--Shoe-->
+
+               @if (item.Sho.Photo != "...")
+               {
+                <a href="@Url.Action("Details", "Shoes", new { id = item.TopID })" class="thumbnail">
+                    <img src=@Url.Content(item.Sho.Photo)>
+
+                    </a>
+                    }
+
+                <!--Bag-->
+
+               @if (item.Bag.Photo != "...")
+               {
+                <a href="@Url.Action("Details", "Bags", new { id = item.TopID })" class="thumbnail">
+                    <img src=@Url.Content(item.Bag.Photo)>
+
+                    </a>
+                    }
+
+                <!--Date of Creation-->
+
+                    <p>@Html.DisplayFor(modelItem => item.Date)</p>
+
+
+</div>
+        </div>
+
+            <div>
+                @Html.ActionLink("Edit", "Edit", new { id = item.OutfitID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.OutfitID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.OutfitID })
+            </div>
+
+    }
+
+
+</div>

@@ -1,0 +1,32 @@
+﻿@model WeekProj6.Models.Accessory
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Accessory</h4>
+    <hr />
+
+    <div class="col-sm-12 col-md-12">
+        <img src=@Url.Content(Model.Photo) class="detail-photo">
+        <div class="thumbnail">
+            <div class="caption text-center">
+                <h3>@Html.DisplayFor(model => model.Name)</h3>
+                <h2>@Html.DisplayFor(model => model.Photo))</h2>
+                <p>@Html.DisplayFor(model => model.Type)</p>
+                <p>@Html.DisplayFor(model => model.Color)</p>
+                <p>@Html.DisplayFor(model => model.Season)</p>
+                <p>@Html.DisplayFor(model => model.Occasion)</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.AccessoryID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,67 @@
+﻿* {
+    font-family: 'BioRhyme', serif;
+}
+
+body {
+    background-color:#462066;
+    
+}
+
+h1, h2, h3, h4, h5 {
+
+    color:#FFB85F;
+}
+
+p {
+    color:#FF7A5A;
+}
+
+/*Categories*/
+table.table {
+    color:#00AAA0;
+}
+
+/*Home*/
+
+dl.dl-horizontal {
+    color:white;
+}
+
+div.form-horizontal {
+    color:#00AAA0;
+}
+
+
+/*Jumbotron*/
+
+div.jumbotron.mainSec {
+
+    background-image: url('../../image/WardrobE_Picture!.jpg');
+}
+
+/*Navbar*/
+
+div#navvy.navbar.navbar-inverse.navbar-static-top{
+    background-color:#A31E39;
+}
+
+#navvy a{
+
+    background-color:#A31E39;
+    color:white;
+
+}
+
+
+/*Thumbnail / Details*/
+
+div.thumbnail a{
+
+    background-color:rgb(0, 0, 206);
+}
+
+div.caption.text-center {
+
+    color:red;
+    background-color:rgb(40, 40, 40);
+}
